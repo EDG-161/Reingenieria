@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="74ca8aaf-7930-4ba0-afb7-7c3814e47454" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZRqsZQRSfLsPydwsNycM2mYyce" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eduardo\Documents\ProyectosPersonales\Reingenieria\Papeleria\static" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Reingenieria" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Reingenieria" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Reingenieria.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74ca8aaf-7930-4ba0-afb7-7c3814e47454" name="Default Changelist" comment="" />
+      <created>1584812461657</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584812461657</updated>
+      <workItem from="1584812472930" duration="34189000" />
+      <workItem from="1584899206316" duration="8874000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1237" height="267" key="GridCell.Tab.0.bottom" timestamp="1584909649799">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state width="1237" height="267" key="GridCell.Tab.0.bottom/0.0.1280.994@0.0.1280.994" timestamp="1584909649799" />
+    <state width="1237" height="267" key="GridCell.Tab.0.center" timestamp="1584909649799">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state width="1237" height="267" key="GridCell.Tab.0.center/0.0.1280.994@0.0.1280.994" timestamp="1584909649799" />
+    <state width="1237" height="267" key="GridCell.Tab.0.left" timestamp="1584909649799">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state width="1237" height="267" key="GridCell.Tab.0.left/0.0.1280.994@0.0.1280.994" timestamp="1584909649799" />
+    <state width="1237" height="267" key="GridCell.Tab.0.right" timestamp="1584909649799">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state width="1237" height="267" key="GridCell.Tab.0.right/0.0.1280.994@0.0.1280.994" timestamp="1584909649799" />
+    <state width="1237" height="329" key="GridCell.Tab.1.bottom" timestamp="1584843460794">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state width="1237" height="329" key="GridCell.Tab.1.bottom/0.0.1280.994@0.0.1280.994" timestamp="1584843460794" />
+    <state width="1237" height="329" key="GridCell.Tab.1.center" timestamp="1584843460794">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state width="1237" height="329" key="GridCell.Tab.1.center/0.0.1280.994@0.0.1280.994" timestamp="1584843460794" />
+    <state width="1237" height="329" key="GridCell.Tab.1.left" timestamp="1584843460794">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state width="1237" height="329" key="GridCell.Tab.1.left/0.0.1280.994@0.0.1280.994" timestamp="1584843460794" />
+    <state width="1237" height="329" key="GridCell.Tab.1.right" timestamp="1584843460794">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state width="1237" height="329" key="GridCell.Tab.1.right/0.0.1280.994@0.0.1280.994" timestamp="1584843460794" />
+    <state x="336" y="320" key="com.intellij.ide.util.TipDialog" timestamp="1584899624679">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state x="336" y="320" key="com.intellij.ide.util.TipDialog/0.0.1280.994@0.0.1280.994" timestamp="1584899624679" />
+    <state x="303" y="213" width="672" height="678" key="search.everywhere.popup" timestamp="1584831562392">
+      <screen x="0" y="0" width="1280" height="994" />
+    </state>
+    <state x="303" y="213" width="672" height="678" key="search.everywhere.popup/0.0.1280.994@0.0.1280.994" timestamp="1584831562392" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/templates/shopping_cart.html</url>
+          <line>69</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

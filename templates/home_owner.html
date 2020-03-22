@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YPS Dueño</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">YPS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="/signOut" class="btn btn-outline-danger my-2 my-sm-0">Cerrar sesion</a>
+        </form>
+      </div>
+    </nav>
+
+    <div class="row mt-5 ml-3 mr-3">
+        <div class="col-md-6">
+            <div class="card border-info mb-3 align-self-center shadow-lg p-3 rounded">
+                <div class="card-header">
+                    <h3>Tus papelerias</h3>
+                </div>
+                <div class="card-title d-flex mt-2">
+                    Aquí podrás ver tus papelerias registradas
+                    <a href="register_paper_store" class="btn btn-success ml-auto p-2">Registrar nueva papeleria</a>
+                </div>
+                <div class="card-body d-flex " style="flex-wrap: wrap">
+
+                    {% for papeleria in papelerias %}
+                        <a href="PaperStore/{{ papeleria.id }}/watch" class="card border-primary m-3" style="max-height: 300px;max-width: 200px">
+                            <div class="card-header">{{ papeleria.name }}</div>
+                            <div class="card-body">
+                                <label class="text-success">Descripcion: {{ papeleria.description }}</label>
+                                <label>Dirección:  {{ papeleria.location }}</label>
+                                <img class="rounded img-fluid" src="{{ papeleria.image_paper.url|slice:"9:"}}" alt="">
+                            </div>
+                        </a>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="row p-4">
+                <div class="col-md-12">
+                    <h3 class="text-info">Agregar una categoria</h3>
+                    <form action="/addCategory/{{ owner.id }}" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name" class="text-primary">Ingresa el nombre de la categoria</label>
+                            <input name="name" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="text-primary">Selecciona una imagen para la categoria</label>
+                            <input type="file" name="image_category" accept="image/*" class="form-control-file"></div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-block btn-success">
+                                Agregar Categoria
+                            </button>
+                            <button type="reset" class="btn btn-block btn-danger">
+                                Limpiar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row p-4">
+            <h3 class="text-succes">Tus categorias</h3>
+                <div class="col-md-12 d-flex" style="flex-wrap: wrap; overflow-y: scroll;max-height: 500px">
+
+                    {% for category in categories %}
+                        <div class="card border-primary m-3" style="max-height: 300px;max-width: 200px">
+                            <div class="card-header">{{ category.name }}</div>
+                            <div class="card-body">
+                                <img class="rounded img-fluid" src="{{ category.image_category.url|slice:"9:"}}" alt="">
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if error is not None %}
+        <script>
+        alert('{{ message }}')
+        </script>
+    {% endif %}
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

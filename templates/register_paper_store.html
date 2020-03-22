@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YPS Registrar papeleria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">YPS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="/signOut" class="btn btn-outline-danger my-2 my-sm-0">Cerrar sesion</a>
+        </form>
+      </div>
+    </nav>
+
+    <div class="row mt-5 ml-3 mr-3 d-flex justify-content-center">
+        <div class="col-md-6 " style="height: 100vh">
+            <div class="card border-info mb-3 align-self-center shadow-lg p-3 rounded">
+                <div class="card-header">
+                    <h3>Agregar Papeleria</h3>
+                </div>
+
+                <div class="card-body">
+                    <form action="register_paper_store" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <span class="text-primary">Ingresa el nombre de la papeleria</span>
+                            <input name="name" required type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <span class="text-primary">Ingresa la dirección de la papeleria</span>
+                            <input name="location" required type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="description" required maxlength="500" placeholder="Ingresa una descripción" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <span class="text-primary">Ingresa una foto de la papeleria</span>
+                            <input name="image_paper" required type="file" class="form-control-file" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-block btn-outline-success" type="submit">Agregar</button>
+                            <button class="btn btn-block btn-outline-warning" type="reset">Limpiar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% if error is not None %}
+        <script>
+            alert('{{ message}}')
+        </script>
+    {% endif %}
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

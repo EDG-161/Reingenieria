@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YPS Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center" style="height: 100vh">
+            <div class="col-md-8 d-flex justify-content-center">
+                <div class="card border-info mb-3 align-self-center shadow-lg p-3 rounded">
+                  <div class="card-header">Registrarse</div>
+                  <div class="card-body text-info">
+                    <h5 class="card-title">Registra una cuenta para continuar</h5>
+                      <form action="/signUp" method="post">
+                          {% csrf_token %}
+                          <div class="form-group">
+                              <label for="user">Ingresar correo electronico</label>
+                              <input name="user" required type="email" placeholder="nombre@dominio.ext" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <label for="password">Ingresar contraseña</label>
+                              <input name="password" required type="password" placeholder="" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <label for="password">Repite la contraseña</label>
+                              <input name="repeat_password" required type="password" placeholder="" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <label for="password">Nombre completo</label>
+                              <input name="name" type="text" required placeholder="" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <label for="password">Seleccione su tipo de usuario</label>
+                              <select name="type_user" id="type_user" required class="form-control">
+                                  <option value="1">Dueño de negocio</option>
+                                  <option value="2">Cliente</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <button class="btn btn-block btn-success">Entrar</button>
+                          </div>
+                          <div class="form-group">
+                              <span>Ya tiene cuenta?</span>
+                              <a href="/" class="btn btn-block btn-success">Inicia sesion</a>
+                          </div>
+
+                      </form>
+
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    {% if error is not None %}
+        <script>
+            alert('{{ message}}')
+        </script>
+    {% endif %}
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
